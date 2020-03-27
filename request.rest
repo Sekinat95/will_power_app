@@ -1,0 +1,31 @@
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+   "email" : "marcos.henrique@toptal.com",
+   "password" : "s3cr3tp4sswo4rd"
+}
+
+
+###
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+   "firstName" : "Marcos1",
+   "lastName" : "Silva1",
+   "email" : "marcos.henrique1@toptal.com",
+   "password" : "s3cr3tp4sswo4rd1"
+}
+
+###
+GET http://localhost:8080/users/5e5e3c1dba42491b7c87d42e
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZTVlM2MxZGJhNDI0OTFiN2M4N2Q0MmUiLCJlbWFpbCI6ImRvZG9kb2RvZG9vZG9AZ21haWwuY29tIiwicGVybWlzc2lvbkxldmVsIjoxLCJwcm92aWRlciI6ImVtYWlsIiwibmFtZSI6ImJhYnkgc2hhcmsiLCJyZWZyZXNoS2V5IjoiYW9NSDNOamRXZ0gwc0ZCZTkyU2hSdz09IiwiaWF0IjoxNTgzMjM0MTcyfQ.hTGaEn1uzX06ESiuLddxfDow78aMluryhvt2VTT0cro
+
+
+###
+GET http://localhost:8080/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZTVlM2MxZGJhNDI0OTFiN2M4N2Q0MmUiLCJlbWFpbCI6ImRvZG9kb2RvZG9vZG9AZ21haWwuY29tIiwicGVybWlzc2lvbkxldmVsIjoxLCJwcm92aWRlciI6ImVtYWlsIiwibmFtZSI6ImJhYnkgc2hhcmsiLCJyZWZyZXNoS2V5IjoiYW9NSDNOamRXZ0gwc0ZCZTkyU2hSdz09IiwiaWF0IjoxNTgzMjM0MTcyfQ.hTGaEn1uzX06ESiuLddxfDow78aMluryhvt2VTT0cro
+
+###
+GET http://localhost:8080/quotes
