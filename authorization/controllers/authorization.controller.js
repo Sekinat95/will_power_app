@@ -13,6 +13,7 @@ exports.getLogin = (req, res) => {
 
 exports.postLogin = (req, res) => {
     const values = req.body
+    console.log(values)
     try {
         let refreshId = req.body.userId + jwtSecret;
         let salt = crypto.randomBytes(16).toString('base64');
@@ -22,7 +23,7 @@ exports.postLogin = (req, res) => {
        // res.json({accessToken: token})
         res.render('home', {
             
-            content: "welcome, awesome "+ values.firstname + '!'
+            content: "welcome, back"
 
 
         })

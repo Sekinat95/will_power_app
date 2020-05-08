@@ -7,7 +7,9 @@ exports.signIn = (req, res) => {
 }
 
 exports.insert = (req, res) => {
-    const values = request.body
+    const values = req.body
+    console.log(req.body.firstname)
+    console.log(values)
     let salt = crypto.randomBytes(16).toString('base64');
     let hash = crypto.createHmac('sha512', salt).update(req.body.password).digest("base64");
     req.body.password = salt + "$" + hash;
@@ -16,7 +18,7 @@ exports.insert = (req, res) => {
         .then((result) => {
             //res.status(201).send({id: result._id});
             res.render('home', {
-                content: "welcome, awesome "+ values.firstname+' !'
+                content: "welcome, awesome "+values.fname+' !'
             })
             
         });

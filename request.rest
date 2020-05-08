@@ -2,8 +2,8 @@ POST http://localhost:8080/login
 Content-Type: application/json
 
 {
-   "email" : "marcos.henrique@toptal.com",
-   "password" : "s3cr3tp4sswo4rd"
+   "email" : "marcos.henrique1@toptal.com",
+   "password" : "s3cr3tp4sswo4rd1"
 }
 
 

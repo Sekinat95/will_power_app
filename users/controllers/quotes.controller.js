@@ -4,7 +4,7 @@ const QuotesModel = require('../models/quotes.model')
 exports.insert = (req, res) => {
     QuotesModel.createQuote(req.body)
         .then((result) => {
-            res.status(201).send({id: result._id});
+            res.status(201).render('dummy','quote entered successfully');
         });
 };
 
@@ -20,10 +20,12 @@ exports.list = (req, res) => {
     QuotesModel.list(limit, page)
         .then((result) => {
             //res.status(200).send(result);
-            res.render('home',{
-                content: result.message
-            }
-            )
+            // res.status(200).render('home',{
+            //     content: result
+            // }
+            // )
+            console.log(result)
+            res.status(200).render('quotes',{content: result})
         })
 };
 
